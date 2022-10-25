@@ -12,6 +12,12 @@ public class UnitTest {
         Assertions.assertTrue(Pages.homePage().isAt());
     }
 
+    @Test
+    public void canGoToAuthorsPage(){
+        Pages.authorsPage().goTo();
+        Assertions.assertTrue(Pages.authorsPage().isAt());
+    }
+
     @AfterAll
     public static void cleanUp(){
         Browser.close();
